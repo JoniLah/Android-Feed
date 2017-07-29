@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.joni.feed.MainActivity"
+    tools:layout_editor_absoluteY="81dp"
+    tools:layout_editor_absoluteX="0dp">
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="418dp"
+        android:layout_height="610dp"
+        android:layout_alignParentTop="true"
+        android:background="#88eabc"
+        android:orientation="vertical"
+        android:id="@+id/linLayout"
+        tools:context=".MainActivity"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+            <LinearLayout
+                android:id="@+id/input_bar"
+                android:layout_width="fill_parent"
+                android:layout_height="75dp"
+                android:background="#469264"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true">
+                <EditText
+                    android:id="@+id/editText"
+                    android:layout_width="269dp"
+                    android:layout_height="47dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="10dp"
+                    android:ems="10"
+                    android:inputType="textMultiLine"
+                    android:text=""
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@+id/button"
+                    tools:layout_constraintBottom_creator="1" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="108dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="1dp"
+                    android:layout_marginRight="9dp"
+                    android:onClick="sendMessage"
+                    android:text="Send"
+                    app:layout_constraintBaseline_toBaselineOf="@+id/editText"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:layout_constraintBaseline_creator="1"
+                    tools:layout_constraintRight_creator="1" />
+            </LinearLayout>
+    </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
